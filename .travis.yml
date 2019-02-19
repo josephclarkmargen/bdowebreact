@@ -1,0 +1,23 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t lexworks/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run lexworks/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-southeast-1"
+  app: "bdotest"
+  env: "Bdotest-env"
+  bucket_name: "elasticbeanstalk-ap-southeast-1-216847732374"
+  bucket_path: "bdotest"
+  on:
+    branch: master
+  access_key_id: AKIAIDA2I2DUYZSINLXA
+  secret_access_key:
+    secure: "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"
+
