@@ -12,7 +12,7 @@ deploy:
   provider: elasticbeanstalk
   region: "ap-southeast-1"
   app: "bdotest"
-  env: "Bdotest-env"
+  env: "Bdotest-env-2"
   bucket_name: "elasticbeanstalk-ap-southeast-1-216847732374"
   bucket_path: "bdotest"
   on:
