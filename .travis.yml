@@ -17,7 +17,7 @@ deploy:
   bucket_path: "bdotest"
   on:
     branch: master
-  access_key_id: AKIAIDA2I2DUYZSINLXA
+  access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
-    secure: "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"
+    secure: "$AWS_SECRET_KEY"
 
